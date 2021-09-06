@@ -9,8 +9,9 @@ import { getHeaderTitle } from "../utils/getHeaderTitle";
 
 type Content = {
   title: string;
-  content: string;
+  content: string[];
   urlBackground: string;
+  highlightedContent: string;
 };
 
 interface ContentsProps {
@@ -27,17 +28,9 @@ export default function Home({ contentPage, headerTitle }: ContentsProps) {
         <div className={styles.content}>
           <p>{contentPage.title}</p>
           <h1>
-            {contentPage.content[0]}
-            <span> </span> {contentPage.content[1]}
-            <span> </span> {contentPage.content[2]}
-            <span> </span> {contentPage.content[3]}
-            <span> </span> {contentPage.content[4]}
-            <span> </span> {contentPage.content[5]}
-            <span> </span> {contentPage.content[6]}
-            <span> </span> {contentPage.content[7]}
+            {contentPage.content.map((word) => ` ${word}`)}
             <span>
-              <span> </span> {contentPage.content[9]}
-              <span> </span> {contentPage.content[10]}
+              {` ${contentPage.highlightedContent}`}
             </span>
           </h1>
           <div className={styles.line}></div>
@@ -61,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const contentPage = {
     title: RichText.asText(response.data.titulo),
     content: RichText.asText(response.data.texto).split(" "),
+    highlightedContent: RichText.asText(response.data.texto_destaque),
     urlBackground: response.data.background.url,
   };
 
