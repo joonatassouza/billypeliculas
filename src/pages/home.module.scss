@@ -1,0 +1,51 @@
+.contentSection {
+  height: 100%;
+}
+
+.content {
+  width: 31rem;
+  p {
+    display: inline-flex;
+    padding: 0 0.5rem;
+    background: rgba(0,0,0,.6666666666666666);
+    color: #FFF;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.1em;
+    line-height: 1.714;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+
+    span {
+      color: #ff7500;
+    }
+  }
+}
+
+.line {
+  background: #ff7500;
+  width: 7rem;
+  height: 0.3rem;
+  margin-top: 13vh;
+}
+
+@media (max-width: 770px) {
+  .content {
+    width: 23rem;
+
+    p {
+      font-size: 0.75rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.footer {
+  color: #FFF;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: flex-end;
+  padding-left: 4rem;
+  padding-bottom: 2.4rem;
+}
+
+@media (max-width: 770px) {
+  .footer {
+    padding-left: 1rem;
+    padding-bottom: 1vh;
+  }
+}

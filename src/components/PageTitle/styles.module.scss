@@ -1,0 +1,26 @@
+.title {
+  width: 10rem;
+
+  display: flex;
+  justify-content: center;
+  
+  span {
+    color: #FFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    display: none;
+  }
+}
